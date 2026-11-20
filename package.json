@@ -5,19 +5,22 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_OPTIONS=--no-deprecation payload build",
-    "start": "NODE_OPTIONS=--no-deprecation next start",
+    "build": "payload build",
+    "vercel-build": "pnpm run payload migrate && pnpm run build",
+    "start": "next start",
     "format": "oxfmt",
-    "generate:importmap": "NODE_OPTIONS=--no-deprecation payload generate:importmap",
-    "generate:types": "NODE_OPTIONS=--no-deprecation payload generate:types",
-    "payload": "NODE_OPTIONS=--no-deprecation payload"
+    "generate:importmap": "payload generate:importmap",
+    "generate:types": "payload generate:types",
+    "payload": "payload"
   },
   "dependencies": {
+    "@payloadcms/db-postgres": "4.0.0-beta.6",
     "@payloadcms/figma": "1.0.0-beta.1",
     "@payloadcms/next": "4.0.0-beta.6",
     "@payloadcms/plugin-cloud-storage": "4.0.0-beta.6",
     "@payloadcms/plugin-mcp": "4.0.0-beta.6",
     "@payloadcms/richtext-lexical": "4.0.0-beta.6",
+    "@payloadcms/storage-vercel-blob": "4.0.0-beta.6",
     "@payloadcms/translations": "4.0.0-beta.6",
     "@payloadcms/ui": "4.0.0-beta.6",
     "@types/qrcode": "^1.5.6",

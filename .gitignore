@@ -1,4 +1,5 @@
 node_modules/
+.vercel/
 .next/
 out/
 dist/
@@ -21,3 +22,6 @@ logs/
 # beside it.
 /.plugins/
 /.opencode-skills/
+
+.vercel
+.env*
