@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: Arial, 'Helvetica Neue', sans-serif;
+  --color-siprec-navy: #081a2e;
+  --color-siprec-blue: #19365f;
+  --color-siprec-gold: #d0a12b;
+  --color-siprec-wine: #713249;
+}
+
+@layer base {
+  * {
+    scrollbar-color: #94a3b8 transparent;
+  }
+
+  html {
+    background: #f4f6f8;
+    transition: background-color 300ms;
+  }
+
+  html.dark {
+    background: #020617;
+  }
+
+  body {
+    font-family: Arial, 'Helvetica Neue', sans-serif;
+  }
+
+  button {
+    cursor: pointer;
+    box-shadow: 0 3px 9px rgb(15 23 42 / 0.12);
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  ::selection {
+    background: #2457df;
+    color: white;
+  }
+}
+
+.figma-custom-code-fragment {
+  display: contents;
+}
+
+.figma-bypass-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 2147483647;
+  transform: translateY(-150%);
+  border-radius: 6px;
+  background: #111827;
+  color: #fff;
+  padding: 8px 12px;
+  font:
+    600 14px/1.2 system-ui,
+    sans-serif;
+  text-decoration: none;
+}
+
+.figma-bypass-link:focus {
+  transform: translateY(0);
+}
